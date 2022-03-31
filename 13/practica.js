@@ -1,21 +1,19 @@
-const clave = "eureka";
-let intentos = 0;
-let claveIngresada = ''
+let valorBase = prompt('Ingresar numero de 5 digitos')
 
-do {
-    if(intentos >= 3)
-    {
-        alert('Se han agotado los intentos.')
-        break;
+
+
+if(valorBase.length == 5){
+
+    console.log('El numero ingresado es: ' + valorBase);
+    console.log('----------------------------------------');
+
+    for (let index = 4; index < valorBase.length; index--) {
+        console.log(valorBase.substring(5, index));  
+        if(index === 0)
+            break; 
     }
-    else
-    {
-        claveIngresada = prompt('Ingrese la clave de acceso.');
-        console.log(claveIngresada);
-
-        intentos += 1;
-        console.info(intentos)
-
-    }
-
-} while (clave.localeCompare(claveIngresada));
+}
+else
+{
+    console.log('El numero ingresado no es de 5 digitos');
+}

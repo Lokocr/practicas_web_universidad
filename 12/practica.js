@@ -1,21 +1,13 @@
-const clave = "eureka";
-let intentos = 0;
-let claveIngresada = ''
+let numeroBase = parseInt(prompt('Ingrese el numero a utilizar'))
 
-do {
-    if(intentos >= 3)
-    {
-        alert('Se han agotado los intentos.')
-        break;
-    }
-    else
-    {
-        claveIngresada = prompt('Ingrese la clave de acceso.');
-        console.log(claveIngresada);
 
-        intentos += 1;
-        console.info(intentos)
+console.log('----------------')
 
-    }
+for (let index = 1; index <= 10; index++) {
 
-} while (clave.localeCompare(claveIngresada));
+    let valorMultuplicado = numeroBase * index;
+    console.log( numeroBase + ' x ' + index + ': ' + valorMultuplicado);
+
+}
+
+console.log('----------------')
