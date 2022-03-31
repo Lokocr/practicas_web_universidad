@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 3 - Ejercicio 1</title>
+</head>
+<body>
+    
+    <button onclick="calcular(this)">Calculadora</button>
+
+<script>
+
+   
+    function sumarNumeros(numero1, numero2){
+        return numero1 + numero2;
+    }
+
+    function restarNumeros(numero1, numero2){
+        return numero1 - numero2;
+    }
+
+    function multiplicarNumeros(numero1, numero2){
+        return numero1 * numero2;
+    }
+
+    function dividirNumeros(numero1, numero2){
+        return numero1 / numero2;
+    }
+
+    function calcular(e){
+
+
+        var numero1 = parseInt( prompt("Ingrese un número"));
+        var numero2 = parseInt(prompt("Ingrese otro número"));
+
+        var operacion = prompt("Ingrese la operación que desea realizar:\n 1 - suma, 2 - resta, 3 - multiplicación, 4 - división\n");
+
+        var resultado = 0;
+
+
+        if(operacion == "1"){
+            resultado = sumarNumeros(numero1, numero2);
+        }else if(operacion == "2"){
+            resultado = restarNumeros(numero1, numero2);
+        }else if(operacion == "3"){
+            resultado = multiplicarNumeros(numero1, numero2);
+        }else if(operacion == "4"){
+            resultado = dividirNumeros(numero1, numero2);
+        }
+
+         document.write("El resultado es: "+resultado);
+
+        alert("El resultado de la operación es: " + resultado);
+    }
+
+
+
+</script>
+
+</body>
+</html>
